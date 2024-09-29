@@ -1,0 +1,456 @@
+---
+title: "Patterns in Populism in the German Bundestag - A Dictionary Based Approach"
+bibliography: references.bib
+number-sections: true
+toc: true
+author: 
+  - name: "István Derda"
+    affiliation: "Leipzig University, Germany"
+    email: "istvan.derda@mailbox.org"
+execute:
+  warning: false
+format: 
+  pdf: 
+    echo: false
+  html: 
+    code-fold: true
+    html-math-method: katex
+---
+
+```{r}
+#| id: load-data
+#| eval: true
+#| include: false
+library(tidyverse)
+
+dt <- data.table::fread("./data/germaparl_popdict.csv")
+```
+
+## Abstract {.unnumbered}
+
+In this work, I present a quantitative look at patterns in the prevalence of populism in speeches of the German Bundestag. For that, I employ an automated dictionary-based approach to look at populism over time and by parliamentary group. I show that the chosen dictionary is transferable for use on parliamentary speeches. Further, I look at popular definitions of populism and show how there are patterns that are better explained by newer definitions than by the most widely used in empirical research.
+
+## Introduction
+
+With the extreme right-wing AfD gaining power with strongly populist rhetoric in Germany, it is imperative to better understand the concept and mechanics of populism. While the AfD's reliance on populism is unmatched by any other party in the German Bundestag today, it is not true that other parties do not take populist stances - or even that their usage of populist communication is constant over time.
+
+In this work, I look at populist communication
+in the Bundestag over the history of the federal republic.
+In particular, I am reproducing results from previous works with a dictionary-based approach proposed by [@gruendl2022populist] on the GermaParl corpus by [@germaparl2].
+Further, I am testing hypotheses in line with the definition of populism as a discursive frame put forward by [@aslanidis2016populism].
+
+My results show that the measure of populism I am using is producing results in line with previous publications.
+Further, I find results that are better explained by looking at populism as a discursive frame, as opposed to a (thin) ideology.
+
+In @sec-theory "Theory", I introduce the concept of populism with different definitions.
+I then derive two hypotheses that show that there are results that are not best explained with the most widely used definition in empirical research. In @sec-method "Data and Methodology", I present the GermaParl corpus of speeches in the German Bundestag and the dictionary-based method I employ to operationalize populism. @sec-results "Results" is divided into @sec-creategermaparl and @sec-overviewgermaparl on the generated data, @sec-popafdlinke and @sec-popsinceafd for my two reproducibility targets, and @sec-poplegisterm and @sec-popgovern on my two hypotheses. Finally, in @sec-conclusion "Conclusion" I summarize my findings and close with @sec-limit "Limitations and Future Work".
+
+## Theory {#sec-theory}
+
+There are 3 most widely used approaches to defining populism. 
+One can look at it as being an _idea_ or (thin) _ideology_ [@mudde2004populist], 
+as a communication _style_ [@moffitt2016global] or a political _strategy_ [@weyland2001clarifying].
+
+While much empirical research follows the ideational approach, 
+I will draw on the more recent definition provided by [@aslanidis2016populism]. 
+The author is building on the work of [@mudde2004populist] but criticizing the ideational definition for fostering disagreement on who is populist and also not explaining short-term changes in populist communication of political agents.
+The author instead proposes to look at populism as something happening mostly on the communicative level,
+defining it as a discursive frame.
+
+To make sure my chosen operationalization of populism is valid and in line with previous research 
+I have identified two reproducibility targets, R1 and R2.
+To then show the limits in the ideational model of populism 
+I am proposing two hypotheses, H1 and H2, that hypothesize short-term changes in populism at events that are more likely to coincide with a strategic shift, than an ideological shift of the political actors.
+
+**R1: The AFDs Speeches are more populist than any of the other parties in the German Bundestag, followed by DIE LINKE**
+
+Previous work has identified DIE LINKE and the AfD as the two populist parties in the German parliament. 
+Some authors do distinguish between the populism of the AfD and DIE LINKE, classifying DIE LINKE as considerably less populist than the AfD [@fawzi2016germany].
+I expect the populism scores computed by my chosen method to be in line with these findings, 
+showing the AFD with a clearly higher populism score than DIE LINKE, 
+while both are above the other parties in parliament.
+
+**R2: Populism in the communication of other parliamentary groups did not rise since the AfD entered the political stage.**
+
+[@Lewandowsky2022] shows, that parliamentary groups in the German parliament did not mimic the AfDs populist communication
+after them entering the German Bundestag.
+I expect to see the same results with my chosen method of measuring populism.
+
+**H1: There is more populism in the parliament towards the end of a legislative term.**
+
+Drawing on the assumption that populism is not an ideology but a discursive frame
+that can be applied strategically to mobilize voters,
+I expect speeches in the German Bundestag to contain more populist phrases
+towards the end of a legislative term, when parties engage in their election campaigns.
+
+**H2: Parliamentary Groups hold more populist speeches when they are not part of the government**
+
+With one core element of populist communication being framing oneself in opposition to a (ruling) elite, 
+I expect parties to make less use of populist framing when in government, than they do when in opposition.
+
+## Data and Methodology {#sec-method}
+
+### The GermaParl Corpus
+
+All plenary protocols of the German Bundestag since its first parliamentary session in 1949 are published by the Bundestag as PDF and in a machine-readable form as XML.
+That sounds like it would be incredibly easy to use them as a data source for automated quantitative analysis.
+They do have a severe limitation, though.
+While the protocols of the German Bundestag are very structured documents,  the structure of most of the published protocols is not available in machine-readable form.
+Only in recent years has the German Bundestag established an XML definition that links speakers and their metadata to speeches.
+For older protocols, the XML files do contain this information, but only in unstructured textual form.
+
+To do meaningful automated analysis of the speeches by speaker, their party or parliamentary group membership, and parliamentary position over the full history of the German Bundestag, one needs the data in a structured, machine-readable form.
+Luckily, multiple attempts to fill this gap in data availability have been made.
+I have chosen to work with the GermaParl corpus [@germaparl2] first presented by [@blatte2018germaparl].
+The method they employ is to parse the plaintext protocols with regular expressions to extract structural elements like speaker name, parliamentary position, as well as party and parliamentary group affiliation.
+The corpus has a good coverage of speeches, ranging from the first parliamentary session in 1949 to 07.09.2021, shortly before the end of the 19. Parliamentary term.
+
+The Corpus is distributed as XML and as an R package, of which I used the latter to avoid easy-to-miss errors with converting the XML to tabular data.
+There were some difficulties with this method of distribution due to the nonstandard `corpus` datatype developed in the PolMine project not being compatible with the popular text mining package `quanteda`.
+
+The most severe limitation of the corpus in relation to this work are known issues with associating speeches with speakers correctly due to the nature of applying regular expressions to a text that can break the identified patterns due to changes in protocolling practice over time, human error, and for the older protocols, errors in the scanning and automatic text extraction processes.
+For identifying the severeness of erroneous text-to-speaker association 
+the authors have published a quality evaluation in [@leonhardt2023evaluating] 
+inspired by the gold standard method for large corpora employed by [@ramisch2023]. They report that in their sample overall, 96.95% of all speakers have been matched to their respective speeches correctly.
+
+### Dictionary Based Measurement of Populism
+
+For measuring the amount of populism I am using the populism dictionary developed by [@gruendl2022populist]
+building on the works of [@rooduijn2011measuring] and [@pauwels2017measuring].
+The dictionary consists of populist words and phrases,
+setting itself apart from earlier approaches by allowing for multi-token regular expressions like _expense (.*) majority_, 
+that could match, e.g., _at the “expense of the majority”_.
+It is distributed as the R package `popdictR`,
+which with default settings takes a corpus of documents,
+annotating each document with the number of sentences
+and the number of sentences containing at least one match with the dictionary.
+
+As the measure of populism I compute a populism score, the ratio of all sentences to sentences matching the populism dictionary as seen in @eq-popscore.
+
+$$ 
+populismscore = \frac{popdictmatches}{nsentences}
+$$ {#eq-popscore}
+
+To deal with the populism score taking on more extreme values with shorter texts, 
+I avoid looking at populism scores of single parliamentary sessions
+but instead, always aggregate speeches over a time period of at least a quarter year,
+which is suitable when looking at trends over multiple legislative terms and provides more stable results.
+
+## Results {#sec-results}
+
+### Data Processing {#sec-creategermaparl}
+
+To get the GermaParl corpus into a data structure that I could apply the populism dictionary by [@gruendl2022populist] I had to convert it from the `polmineR` corpus it is distributed as.
+I wrote some R code that would go over the whole corpus in batches and convert it to a `data.table` from the `data.table` package, with each row representing all the text spoken by one speaker in one parliamentary session.
+In the same process, I used the `popdicR` package described in [@gruendl2022populist] to add the number of sentences with dictionary matches (`dict_gruendl_2022`), as well as the number of sentences (`n_sentences`) to each row.
+The progress, as well as each batch result, would be immediately written to disk as CSV for the process to be able to pick up processing where it left off in case it were interrupted.
+
+The conversion code and the resulting CSV can be found in the online appendix for reproducibility and as a reference for future works wanting to update the data to newer versions of GermaParl or needing the germaparl corpus as `quanteda`-corpus or in tabular form.
+I ran the code locally on my laptop, as it has moderate memory requirements and executed in just a couple of hours - though on a high-performance computing infrastructure the code could be massively parallelized.
+
+### Overview of the Data {#sec-overviewgermaparl}
+
+My dataset is a table of 220976 documents (rows), each document being all the text spoken by one speaker in one parliamentary session, saved in the `text` column.
+Each document also contains the metadata saved to each document and speech in the GermaParl Corpus, as documented in [@germaparl_doc].
+
+Notable for this work are:
+
+- `lp` - legislative term
+- `no` - session number in a legislative term
+- `date` - date of the parliamentary session
+- `year` - year of the parliamentary session
+- `speaker_name` - name of the speaker
+- `speaker_party` - party of the speaker
+- `speaker_parlgroup` - parliamentary group of the speaker
+
+Additionally, each document contains the results added by applying the populism dictionary:
+
+- `n_sentences` - The number of sentences identified by `popdictR`
+- `n_tokens` - The number of sentences identified by `popdictR`
+- `dict_gruendl_2020` - The number of sentences containing at least one dictionary match
+
+There are 30 unique values for the variable speaker_party and 23 for the variable speaker_parlgroup.
+A large portion of these only ever appear in the first and second parliamentary terms, and for better readability of plots, I exclude them from analysis.
+There are also some missing values (NA) for speaker_party and speaker_parlgroup, as well as the values "parteilos" and "fraktionslos" which I also exclude.
+An honorable mention goes to Ludwig Erhard, who's party affiliation is disputed and who is therefore in his on party category "CDU oder parteilos". He was indisputably in the parliamentary group "CDU/CSU" though, and thus contained in all plots on parliamentary groups.
+
+For the reader to get an overview, @fig-pophistparlgroups shows the populism score of all parties relevant in the Bundestag today over the history of the Federal Republic.
+
+
+```{r}
+#| label: fig-pophistparlgroups
+#| fig-cap: "Populism in the Bundestag Over Time"
+res<-dt |>
+  filter(speaker_parlgroup %in% c("CDU/CSU", "SPD", "FDP", "GRUENE", "DIE LINKE", "AfD", "PDS")) |>
+  mutate(date_quarter = floor_date(date, "quarter")) |>
+  group_by(speaker_parlgroup, date_quarter) |>
+  summarise(dict_gruendl_2020 = sum(dict_gruendl_2020), n_sentences=sum(n_sentences), .groups = 'drop') |>
+  mutate(rel_popdict = dict_gruendl_2020/n_sentences) |>
+  ggplot(mapping=aes(x=date_quarter, color=speaker_parlgroup)) + 
+  geom_point(alpha = 0.3, size = 0.3, mapping=aes(y=rel_popdict)) +
+  geom_line(alpha = 0.3, linewidth = 0.3, mapping=aes(y=rel_popdict)) +
+  geom_smooth(se = FALSE, method = "gam", mapping=aes(y=rel_popdict)) +
+  labs(
+  title = "Populism in Speeches Over Time by Parliamentary Group",
+  color = "Parliamentary Group"
+  ) +
+  ylab("Populism Score") +
+  xlab("Date") +
+  scale_color_manual(values = c("CDU/CSU" = "#333333", "SPD" = "#F44647", "FDP" = "#FFC107", "GRUENE" = "#46962B", "DIE LINKE" = "#C72767", "AfD" = "#8B4513", "PDS" = "pink"))
+print(res)
+```
+
+### R1: The AFDs Speeches are more populist than any of the other parties in the German Bundestag, followed by DIE LINKE {#sec-popafdlinke}
+
+The data supports this observation, in line with previous publications ranking the AfD as more populist than DIE LINKE.
+@tbl-popafdlinke shows the populism score of all parliamentary groups since the AfD joined the Bundestag. Speeches by members of DIE LINKE have a populism score (rel_popdict) of 1.5 in this timeframe,
+while speeches by the AfD have a populism score around 0.025.
+All other parliamentary groups speeches show a populism score of below 0.01 with the CDU/CSU at the lowest with 0.0087.
+
+```{r}
+#| label: tbl-popafdlinke
+#| tbl-cap: "Populism Score of All Parliamentary Groups from 2017-01-01 to 2021-09-07"
+dt |>
+  filter(year >= 2017) |>
+  filter(speaker_parlgroup != "fraktionslos") |>
+  filter(speaker_parlgroup %in% c("CDU/CSU", "SPD", "FDP", "GRUENE", "DIE LINKE", "AfD", "PDS")) |>
+  group_by(speaker_parlgroup) |>
+  summarise(dict_gruendl_2020 = sum(dict_gruendl_2020), n_sentences=sum(n_sentences), .groups = 'drop') |>
+  mutate(rel_popdict = dict_gruendl_2020/n_sentences) |>
+  arrange(desc(rel_popdict)) |>
+  gt::gt()
+```
+
+### R2: Populism in the Communication of Other Parliamentary Groups Did Not Rise Since the AfD Entered the Political Stage. {#sec-popsinceafd}
+
+The data shows no evidence for more populism in the speeches of other parliamentary groups since the foundation of the AfD, 
+nor since it entered the European Parliament or the German Bundestag.
+On the contrary, as @fig-popparlgroupsafd shows, 
+while CDU/CSU, DIE LINKE, GRUENE and FDP remain very constant, 
+the populism score of SPD speeches is trending downward since a small peak before the founding of the AfD.
+
+```{r}
+#| label: fig-popparlgroupsafd
+#| fig-cap: Populism in parliamentary speeches by parliamentary group since 2005
+dt |>
+  filter(year > 2005) |>
+  filter(speaker_parlgroup != "fraktionslos") |>
+  filter(speaker_parlgroup %in% c("CDU/CSU", "SPD", "FDP", "GRUENE", "DIE LINKE", "AfD", "PDS")) |>
+  mutate(date_quarter = floor_date(date, "quarter")) |>
+  group_by(speaker_parlgroup, date_quarter) |>
+  summarise(dict_gruendl_2020 = sum(dict_gruendl_2020), n_sentences=sum(n_sentences), .groups = 'drop') |>
+  mutate(rel_popdict = dict_gruendl_2020/n_sentences) |>
+  ggplot(mapping=aes(x=as.Date(date_quarter), color=speaker_parlgroup)) + 
+  geom_point(alpha = 0.3, size = 0.3, mapping=aes(y=rel_popdict)) +
+  geom_line(alpha = 0.3, linewidth = 0.3, mapping=aes(y=rel_popdict)) +
+  geom_smooth(se = FALSE, linewidth = 0.8, method = "gam", mapping=aes(y=rel_popdict)) +
+  geom_vline(linewidth = 0.3, xintercept = as.Date(c('2013-02-06', '2014-05-15', '2017-09-24'))) +
+  labs(
+  title = "Populism in Speeches by Parliamentary Group Since 2005",
+  color = "Parliamentary Group"
+  ) +
+  ylab("Populism Score") +
+  xlab("Date") +
+  annotate("text", size=4, x = as.Date('2013-02-06'), y = 0.03, label = "Foundation of the AfD", vjust = -0.2, angle = 90) +
+  annotate("text", size=4, x = as.Date('2014-05-15'), y = 0.03, label = "AfD enters the European Parliament", vjust = -0.2, angle = 90) +
+  annotate("text", size=4, x = as.Date('2017-09-24'), y = 0.03, label = "AfD enters the Bundestag", vjust = -0.2, angle = 90) +
+  scale_color_manual(values = c("CDU/CSU" = "#333333", "SPD" = "#F44647", "FDP" = "#FFC107", "GRUENE" = "#46962B", "DIE LINKE" = "#C72767", "AfD" = "#8B4513", "PDS" = "pink"))
+```
+
+### H1: There is more populism in the Bundestag towards the end of a legislative term. {#sec-poplegisterm}
+
+The Data supports a rise in populism overall in the parliament towards the end of a legislative term, as seen in @fig-poplegisterm.
+Interestingly, a legislative term does also, in general, start with more populism in speeches, even higher than the overall populism score at the end of a legislative term.
+
+Another interesting observation can be made:
+there is a distinction to be made between legislative terms 1-7 and 8-18 as seen in @fig-poplegistermearly and @fig-poplegistermlate.
+When looking at the first 7 terms in isolation, 
+they do not show populism rising towards the end of the legislative term.
+On the contrary, populism seems to be at its lowest at the end of the legislative term.
+For the terms 8-18 it holds true that populism scores of speeches are higher at the end of a legislative term, with the only exception of the 15th and 18th legislative terms.
+
+```{r}
+#| label: fig-poplegisterm
+#| fig-cap: Populism over the course of a legislative term
+dt |>
+    summarise(dict_gruendl_2020 = sum(dict_gruendl_2020), n_sentences = sum(n_sentences), no = median(no), lp=median(lp), .by = date) |>
+    mutate(rel_popdict = dict_gruendl_2020/n_sentences) |>
+    reframe(lp_progress = no/max(no), rel_popdict, dict_gruendl_2020, n_sentences, .by = lp) |>
+    ggplot(mapping=aes(x=lp_progress, y=rel_popdict)) +
+    geom_smooth(linewidth=0.3, mapping=aes(color=as.factor(lp)), se=FALSE) +
+    geom_smooth() +
+    labs(
+    title = "Populism Over the Course of A Legislative Term",
+    color = "Legislative Term"
+    ) +
+    ylab("Populism Score") +
+    xlab("Legislative Term Progress")
+```
+
+```{r}
+#| label: fig-poplegistermearly
+#| fig-cap: Populism in parliamentary speeches in legislative terms 1-7
+result <- dt |>
+  filter(lp %in% 1:7) |>
+  summarise(dict_gruendl_2020 = sum(dict_gruendl_2020), n_sentences = sum(n_sentences), no = median(no), lp=median(lp), .by = date) |>
+  mutate(rel_popdict = dict_gruendl_2020/n_sentences) |>
+  reframe(lp_progress = no/max(no), rel_popdict, dict_gruendl_2020, n_sentences, .by = lp) |>
+  ggplot(mapping=aes(x=lp_progress, y=rel_popdict)) +
+  geom_smooth(linewidth=0.3, mapping=aes(color=as.factor(lp)), se=FALSE) +
+  geom_smooth() +
+  labs(
+  title = "Populism in Parliamentary Speeches 1st-7th Legislative Term",
+  color = "Legislative Term"
+  ) +
+  ylab("Populism Score") +
+  xlab("Legislative Term Progress")
+print(result)
+```
+
+```{r}
+#| label: fig-poplegistermlate
+#| fig-cap: Populism in parliamentary speeches in legislative terms 8-18
+result <- dt |>
+  filter(lp %in% 8:18) |>
+  summarise(dict_gruendl_2020 = sum(dict_gruendl_2020), n_sentences = sum(n_sentences), no = median(no), lp=median(lp), .by = date) |>
+  mutate(rel_popdict = dict_gruendl_2020/n_sentences) |>
+  reframe(lp_progress = no/max(no), rel_popdict, dict_gruendl_2020, n_sentences, .by = lp) |>
+  ggplot(mapping=aes(x=lp_progress, y=rel_popdict)) +
+  geom_smooth(linewidth=0.3, mapping=aes(color=as.factor(lp)), se=FALSE) +
+  geom_smooth() +
+  labs(
+  title = "Populism in Parliamentary Speeches Legislative Terms 8-18",
+  color = "Legislative Term"
+  ) +
+  ylab("Populism Score") +
+  xlab("Legislative Term Progress")
+print(result)
+```
+
+### H2: Parliamentary Groups hold more populist speeches when they are not part of the government {#sec-popgovern}
+
+@fig-popgovern shows the evolution of the populism score of the four parties still relevant today that have taken governmental responsibility in the past, with parties forming the government in a given period indicated by colored bars at the bottom of each chart.
+For the CDU the plot @fig-popgovern-1 shows a clear jump in the graphs both times it entered and left the government.
+The SPD in @fig-popgovern-2 does not clearly exhibit this behavior until entering the government in 1998.
+After that, there is a clear change in populism score at the subsequent times entering and leaving the government.
+Before 1998, there are distinct jumps in the populism score, but they occur both while in government, and while in opposition.
+The populism score of the FDP shown in @fig-popgovern-3 seems to be less linked to actually being in government.
+The Greens in @fig-popgovern-4 do have jumps in populism score when entering and exiting government, but they are minor in comparison to the drastic decrease in populism since their founding.
+
+```{r}
+#| label: fig-popgovern
+#| fig-cap: "Populism score of speeches over time by parliamentary group. Bottom bars indicate which parliamentary groups formed the government."
+#| fig-subcap: 
+#|  - "CDU/CSU"
+#|  - "SPD"
+#|  - "FDP"
+#|  - "GRUENE"
+#| layout-ncol: 2
+#| layout-nrow: 2
+for (parlgroup in c("CDU/CSU", "SPD", "FDP", "GRUENE")) {
+  res<-dt |>
+    filter(speaker_parlgroup == parlgroup) |>
+    mutate(date_quarter = floor_date(date, "year")) |>
+    group_by(speaker_parlgroup, date_quarter) |>
+    summarise(dict_gruendl_2020 = sum(dict_gruendl_2020), n_sentences=sum(n_sentences), .groups = 'drop') |>
+    mutate(rel_popdict = dict_gruendl_2020/n_sentences) |>
+    ggplot(mapping=aes(x=as.Date(date_quarter), color=speaker_parlgroup)) + 
+    geom_point(alpha = 0.3, size = 0.3, mapping=aes(y=rel_popdict)) +
+    geom_line(mapping=aes(y=rel_popdict)) +
+    labs(
+    color = "Parliamentary Group"
+    ) +
+    ylab("Populism Score") +
+    xlab("Date") +
+    scale_color_manual(values = c("CDU/CSU" = "#333333", "SPD" = "#F44647", "FDP" = "#FFC107", "GRUENE" = "#46962B", "DIE LINKE" = "#C72767", "AfD" = "#8B4513", "PDS" = "pink")) +
+    annotate("rect", xmin = as.Date('1949-09-20'), xmax = as.Date('1957-10-29'), ymin = 0, ymax = 0.002, 
+             alpha = 0.5, fill = "#333333")+
+    annotate("rect", xmin = as.Date('1949-09-20'), xmax = as.Date('1957-10-29'), ymin = 0.002, ymax = 0.004, 
+             alpha = 0.5, fill = "#FFC107")+
+    annotate("rect", xmin = as.Date('1957-10-29'), xmax = as.Date('1961-11-07'), ymin = 0, ymax = 0.002, 
+             alpha = 0.5, fill = "#333333")+
+    annotate("rect", xmin = as.Date('1961-11-07'), xmax = as.Date('1966-12-01'), ymin = 0, ymax = 0.002, 
+             alpha = 0.5, fill = "#333333")+
+    annotate("rect", xmin = as.Date('1961-11-07'), xmax = as.Date('1966-12-01'), ymin = 0.002, ymax = 0.004, 
+             alpha = 0.5, fill = "#FFC107")+
+    annotate("rect", xmin = as.Date('1966-12-01'), xmax = as.Date('1969-10-22'), ymin = 0, ymax = 0.002, 
+             alpha = 0.5, fill = "#333333")+
+    annotate("rect", xmin = as.Date('1966-12-01'), xmax = as.Date('1969-10-22'), ymin = 0.004, ymax = 0.006, 
+             alpha = 0.5, fill = "#F44647")+
+    annotate("rect", xmin = as.Date('1969-10-22'), xmax = as.Date('1982-10-04'), ymin = 0.002, ymax = 0.004, 
+             alpha = 0.5, fill = "#FFC107")+
+    annotate("rect", xmin = as.Date('1969-10-22'), xmax = as.Date('1982-10-04'), ymin = 0.004, ymax = 0.006, 
+             alpha = 0.5, fill = "#F44647")+
+    annotate("rect", xmin = as.Date('1982-10-04'), xmax = as.Date('1998-10-27'), ymin = 0, ymax = 0.002, 
+             alpha = 0.5, fill = "#333333")+
+    annotate("rect", xmin = as.Date('1982-10-04'), xmax = as.Date('1998-10-27'), ymin = 0.002, ymax = 0.004, 
+             alpha = 0.5, fill = "#FFC107")+
+    annotate("rect", xmin = as.Date('1998-10-27'), xmax = as.Date('2005-11-22'), ymin = 0.004, ymax = 0.006, 
+             alpha = 0.5, fill = "#F44647")+
+    annotate("rect", xmin = as.Date('1998-10-27'), xmax = as.Date('2005-11-22'), ymin = 0.006, ymax = 0.008, 
+             alpha = 0.5, fill = "#46962B")+
+    annotate("rect", xmin = as.Date('2005-11-22'), xmax = as.Date('2009-10-29'), ymin = 0, ymax = 0.002, 
+             alpha = 0.5, fill = "#333333")+
+    annotate("rect", xmin = as.Date('2005-11-22'), xmax = as.Date('2009-10-29'), ymin = 0.004, ymax = 0.006, 
+             alpha = 0.5, fill = "#F44647")+
+    annotate("rect", xmin = as.Date('2009-10-29'), xmax = as.Date('2013-12-17'), ymin = 0, ymax = 0.002, 
+             alpha = 0.5, fill = "#333333")+
+    annotate("rect", xmin = as.Date('2009-10-29'), xmax = as.Date('2013-12-17'), ymin = 0.002, ymax = 0.004, 
+             alpha = 0.5, fill = "#FFC107")+
+    annotate("rect", xmin = as.Date('2013-12-17'), xmax = as.Date('2021-12-08'), ymin = 0, ymax = 0.002, 
+             alpha = 0.5, fill = "#333333")+
+    annotate("rect", xmin = as.Date('2013-12-17'), xmax = as.Date('2021-12-08'), ymin = 0.004, ymax = 0.006, 
+             alpha = 0.5, fill = "#F44647") +
+    ylim(0, 0.025) +
+    theme(legend.position = "none")
+  print(res)
+}
+```
+
+## Conclusion {#sec-conclusion}
+
+In this work I have shown that applying the `popdictR` package to parliamentary speeches yields results that are in line with previous research,
+indicating that it is not just applicable to social media posts, but to parliamentary speech as well.
+
+In line with previous research [@fawzi2016germany], [@gruendl2022populist], results for R1 show
+that applying the popdictR to parliamentary speeches in the bundestag
+resturns the AfD with the party with the highest populism score,
+followed by DIE LINKE.
+
+My results for R2 further confirm the validity of `popdictR` on parliamentary speech,
+by replicating the result of [@Lewandowsky2022], that populism of parties does not increase with new populist parties entering parliament.
+
+H1: "There is more populism in the parliament towards the end of a legislative term" has been confirmed, with a caveat.
+Examining the data closely revealed that the pattern only appears starting from the 8. term.
+That is most likely because of the elections having taken place earlier in the legislative term in terms 1-7,
+while from the 8. term on elections took place a maximum of 30 days before the end of the term.
+Thus the hypothesis is ill posed and should have referred to the time of the election instead of the end of a legislative term.
+
+The pattern emerging at the 8. term does still prove that there is periodic short term changes in the level of populistic communication happening for political actors.
+As these changes occur regularly at the start and end of a parliamentary term
+they are better explainable with a strategic change of communication than an ideological change of the parliamentary group.
+
+H2: "Parliamentary Groups hold more populistic speeches when they are not part of the government" has been partly confirmed.
+While the pattern does not hold true for all parties every time,
+it is clearly visible in the data that mulitple times strong changes in populism score 
+of the CDU/CSU, the GRUENE and the SPD 
+occur at times they enter or exit government.
+
+The results for H1 and H2 show that changes in the level of populistic communication of parliamentary groups happen at events
+that more likely coincide with a strategic shift,
+than an ideological shift towards more or less populism.
+I argue that these results support the notion that it can be useful to look at populism on a communicative level rather than defining it as an ideology.
+
+## Limitations and Future Work {#sec-limit}
+
+While this work has been made under the assumption of the usefulness of the populism definition by [@aslanidis2016populism] and does show that there are results that are better explained by different approaches than the definition of populism as a (thin) ideology, the results do not support one specific definition of populism. Future work could focus on finding more specific tests that systematically rule out different definitions of populism.
+ 
+It would also be interesting to see comparitive studies testing if the two tested hypothesis do hold true in other parliaments aswell.
+
+## Appendix
+
+All the code as well as a html version of this paper can be found at https://github.com/istvan-derda/GermaParlPopulism.
+
+## References
+::: {#refs}
+:::

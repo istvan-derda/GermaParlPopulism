@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="István Derda">
+
+<title>Patterns in Populism in the German Bundestag - A Dictionary Based Approach</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="Paper_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Paper_files/libs/quarto-html/quarto.js"></script>
+<script src="Paper_files/libs/quarto-html/popper.min.js"></script>
+<script src="Paper_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Paper_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Paper_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Paper_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Paper_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Paper_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Paper_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#sec-theory" id="toc-sec-theory" class="nav-link" data-scroll-target="#sec-theory"><span class="header-section-number">2</span> Theory</a></li>
+  <li><a href="#sec-method" id="toc-sec-method" class="nav-link" data-scroll-target="#sec-method"><span class="header-section-number">3</span> Data and Methodology</a>
+  <ul class="collapse">
+  <li><a href="#the-germaparl-corpus" id="toc-the-germaparl-corpus" class="nav-link" data-scroll-target="#the-germaparl-corpus"><span class="header-section-number">3.1</span> The GermaParl Corpus</a></li>
+  <li><a href="#dictionary-based-measurement-of-populism" id="toc-dictionary-based-measurement-of-populism" class="nav-link" data-scroll-target="#dictionary-based-measurement-of-populism"><span class="header-section-number">3.2</span> Dictionary Based Measurement of Populism</a></li>
+  </ul></li>
+  <li><a href="#sec-results" id="toc-sec-results" class="nav-link" data-scroll-target="#sec-results"><span class="header-section-number">4</span> Results</a>
+  <ul class="collapse">
+  <li><a href="#sec-creategermaparl" id="toc-sec-creategermaparl" class="nav-link" data-scroll-target="#sec-creategermaparl"><span class="header-section-number">4.1</span> Data Processing</a></li>
+  <li><a href="#sec-overviewgermaparl" id="toc-sec-overviewgermaparl" class="nav-link" data-scroll-target="#sec-overviewgermaparl"><span class="header-section-number">4.2</span> Overview of the Data</a></li>
+  <li><a href="#sec-popafdlinke" id="toc-sec-popafdlinke" class="nav-link" data-scroll-target="#sec-popafdlinke"><span class="header-section-number">4.3</span> R1: The AFDs Speeches are more populist than any of the other parties in the German Bundestag, followed by DIE LINKE</a></li>
+  <li><a href="#sec-popsinceafd" id="toc-sec-popsinceafd" class="nav-link" data-scroll-target="#sec-popsinceafd"><span class="header-section-number">4.4</span> R2: Populism in the Communication of Other Parliamentary Groups Did Not Rise Since the AfD Entered the Political Stage.</a></li>
+  <li><a href="#sec-poplegisterm" id="toc-sec-poplegisterm" class="nav-link" data-scroll-target="#sec-poplegisterm"><span class="header-section-number">4.5</span> H1: There is more populism in the Bundestag towards the end of a legislative term.</a></li>
+  <li><a href="#sec-popgovern" id="toc-sec-popgovern" class="nav-link" data-scroll-target="#sec-popgovern"><span class="header-section-number">4.6</span> H2: Parliamentary Groups hold more populist speeches when they are not part of the government</a></li>
+  </ul></li>
+  <li><a href="#sec-conclusion" id="toc-sec-conclusion" class="nav-link" data-scroll-target="#sec-conclusion"><span class="header-section-number">5</span> Conclusion</a></li>
+  <li><a href="#sec-limit" id="toc-sec-limit" class="nav-link" data-scroll-target="#sec-limit"><span class="header-section-number">6</span> Limitations and Future Work</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7</span> References</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Paper.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Patterns in Populism in the German Bundestag - A Dictionary Based Approach</h1>
+</div>
+
+
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Author</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">István Derda <a href="mailto:istvan.derda@mailbox.org" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            Leipzig University, Germany
+          </p>
+      </div>
+  </div>
+
+<div class="quarto-title-meta">
+
+      
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Abstract</strong></p>
+<p>In this work, I present a quantitative look at patterns in the prevalence of populism in speeches of the German Bundestag. For that, I employ an automated dictionary-based approach to look at populism over time and by parliamentary group. I show that the chosen dictionary is transferable for use on parliamentary speeches. Further, I look at popular definitions of populism and show how there are patterns that are better explained by newer definitions than by the most widely used in empirical research.</p>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>With the extreme right-wing AfD gaining power with strongly populist rhetoric in Germany, it is imperative to better understand the concept and mechanics of populism. While the AfD’s reliance on populism is unmatched by any other party in the German Bundestag today, it is not true that other parties do not take populist stances - or even that their usage of populist communication is constant over time.</p>
+<p>In this work, I look at populist communication in the Bundestag over the history of the federal republic. In particular, I am reproducing results from previous works with a dictionary-based approach proposed by <span class="citation" data-cites="gruendl2022populist">(<a href="#ref-gruendl2022populist" role="doc-biblioref">Gründl 2022</a>)</span> on the GermaParl corpus by <span class="citation" data-cites="germaparl2">(<a href="#ref-germaparl2" role="doc-biblioref">Blaette and Leonhardt 2023a</a>)</span>. Further, I am testing hypotheses in line with the definition of populism as a discursive frame put forward by <span class="citation" data-cites="aslanidis2016populism">(<a href="#ref-aslanidis2016populism" role="doc-biblioref">Aslanidis 2016</a>)</span>.</p>
+<p>My results show that the measure of populism I am using is producing results in line with previous publications. Further, I find results that are better explained by looking at populism as a discursive frame, as opposed to a (thin) ideology.</p>
+<p>In <a href="#sec-theory" class="quarto-xref">Section&nbsp;2</a> “Theory”, I introduce the concept of populism with different definitions. I then derive two hypotheses that show that there are results that are not best explained with the most widely used definition in empirical research. In <a href="#sec-method" class="quarto-xref">Section&nbsp;3</a> “Data and Methodology”, I present the GermaParl corpus of speeches in the German Bundestag and the dictionary-based method I employ to operationalize populism. <a href="#sec-results" class="quarto-xref">Section&nbsp;4</a> “Results” is divided into <a href="#sec-creategermaparl" class="quarto-xref">Section&nbsp;4.1</a> and <a href="#sec-overviewgermaparl" class="quarto-xref">Section&nbsp;4.2</a> on the generated data, <a href="#sec-popafdlinke" class="quarto-xref">Section&nbsp;4.3</a> and <a href="#sec-popsinceafd" class="quarto-xref">Section&nbsp;4.4</a> for my two reproducibility targets, and <a href="#sec-poplegisterm" class="quarto-xref">Section&nbsp;4.5</a> and <a href="#sec-popgovern" class="quarto-xref">Section&nbsp;4.6</a> on my two hypotheses. Finally, in <a href="#sec-conclusion" class="quarto-xref">Section&nbsp;5</a> “Conclusion” I summarize my findings and close with <a href="#sec-limit" class="quarto-xref">Section&nbsp;6</a> “Limitations and Future Work”.</p>
+</section>
+<section id="sec-theory" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="sec-theory"><span class="header-section-number">2</span> Theory</h2>
+<p>There are 3 most widely used approaches to defining populism. One can look at it as being an <em>idea</em> or (thin) <em>ideology</em> <span class="citation" data-cites="mudde2004populist">(<a href="#ref-mudde2004populist" role="doc-biblioref">Mudde 2004</a>)</span>, as a communication <em>style</em> <span class="citation" data-cites="moffitt2016global">(<a href="#ref-moffitt2016global" role="doc-biblioref">Moffitt 2016</a>)</span> or a political <em>strategy</em> <span class="citation" data-cites="weyland2001clarifying">(<a href="#ref-weyland2001clarifying" role="doc-biblioref">Weyland 2001</a>)</span>.</p>
+<p>While much empirical research follows the ideational approach, I will draw on the more recent definition provided by <span class="citation" data-cites="aslanidis2016populism">(<a href="#ref-aslanidis2016populism" role="doc-biblioref">Aslanidis 2016</a>)</span>. The author is building on the work of <span class="citation" data-cites="mudde2004populist">(<a href="#ref-mudde2004populist" role="doc-biblioref">Mudde 2004</a>)</span> but criticizing the ideational definition for fostering disagreement on who is populist and also not explaining short-term changes in populist communication of political agents. The author instead proposes to look at populism as something happening mostly on the communicative level, defining it as a discursive frame.</p>
+<p>To make sure my chosen operationalization of populism is valid and in line with previous research I have identified two reproducibility targets, R1 and R2. To then show the limits in the ideational model of populism I am proposing two hypotheses, H1 and H2, that hypothesize short-term changes in populism at events that are more likely to coincide with a strategic shift, than an ideological shift of the political actors.</p>
+<p><strong>R1: The AFDs Speeches are more populist than any of the other parties in the German Bundestag, followed by DIE LINKE</strong></p>
+<p>Previous work has identified DIE LINKE and the AfD as the two populist parties in the German parliament. Some authors do distinguish between the populism of the AfD and DIE LINKE, classifying DIE LINKE as considerably less populist than the AfD <span class="citation" data-cites="fawzi2016germany">(<a href="#ref-fawzi2016germany" role="doc-biblioref">Fawzi, Obermaier, and Reinemann 2016</a>)</span>. I expect the populism scores computed by my chosen method to be in line with these findings, showing the AFD with a clearly higher populism score than DIE LINKE, while both are above the other parties in parliament.</p>
+<p><strong>R2: Populism in the communication of other parliamentary groups did not rise since the AfD entered the political stage.</strong></p>
+<p><span class="citation" data-cites="Lewandowsky2022">(<a href="#ref-Lewandowsky2022" role="doc-biblioref">Lewandowsky et al. 2022</a>)</span> shows, that parliamentary groups in the German parliament did not mimic the AfDs populist communication after them entering the German Bundestag. I expect to see the same results with my chosen method of measuring populism.</p>
+<p><strong>H1: There is more populism in the parliament towards the end of a legislative term.</strong></p>
+<p>Drawing on the assumption that populism is not an ideology but a discursive frame that can be applied strategically to mobilize voters, I expect speeches in the German Bundestag to contain more populist phrases towards the end of a legislative term, when parties engage in their election campaigns.</p>
+<p><strong>H2: Parliamentary Groups hold more populist speeches when they are not part of the government</strong></p>
+<p>With one core element of populist communication being framing oneself in opposition to a (ruling) elite, I expect parties to make less use of populist framing when in government, than they do when in opposition.</p>
+</section>
+<section id="sec-method" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="sec-method"><span class="header-section-number">3</span> Data and Methodology</h2>
+<section id="the-germaparl-corpus" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="the-germaparl-corpus"><span class="header-section-number">3.1</span> The GermaParl Corpus</h3>
+<p>All plenary protocols of the German Bundestag since its first parliamentary session in 1949 are published by the Bundestag as PDF and in a machine-readable form as XML. That sounds like it would be incredibly easy to use them as a data source for automated quantitative analysis. They do have a severe limitation, though. While the protocols of the German Bundestag are very structured documents, the structure of most of the published protocols is not available in machine-readable form. Only in recent years has the German Bundestag established an XML definition that links speakers and their metadata to speeches. For older protocols, the XML files do contain this information, but only in unstructured textual form.</p>
+<p>To do meaningful automated analysis of the speeches by speaker, their party or parliamentary group membership, and parliamentary position over the full history of the German Bundestag, one needs the data in a structured, machine-readable form. Luckily, multiple attempts to fill this gap in data availability have been made. I have chosen to work with the GermaParl corpus <span class="citation" data-cites="germaparl2">(<a href="#ref-germaparl2" role="doc-biblioref">Blaette and Leonhardt 2023a</a>)</span> first presented by <span class="citation" data-cites="blatte2018germaparl">(<a href="#ref-blatte2018germaparl" role="doc-biblioref">Blätte and Blessing 2018</a>)</span>. The method they employ is to parse the plaintext protocols with regular expressions to extract structural elements like speaker name, parliamentary position, as well as party and parliamentary group affiliation. The corpus has a good coverage of speeches, ranging from the first parliamentary session in 1949 to 07.09.2021, shortly before the end of the 19. Parliamentary term.</p>
+<p>The Corpus is distributed as XML and as an R package, of which I used the latter to avoid easy-to-miss errors with converting the XML to tabular data. There were some difficulties with this method of distribution due to the nonstandard <code>corpus</code> datatype developed in the PolMine project not being compatible with the popular text mining package <code>quanteda</code>.</p>
+<p>The most severe limitation of the corpus in relation to this work are known issues with associating speeches with speakers correctly due to the nature of applying regular expressions to a text that can break the identified patterns due to changes in protocolling practice over time, human error, and for the older protocols, errors in the scanning and automatic text extraction processes. For identifying the severeness of erroneous text-to-speaker association the authors have published a quality evaluation in <span class="citation" data-cites="leonhardt2023evaluating">(<a href="#ref-leonhardt2023evaluating" role="doc-biblioref">Leonhardt and Blätte 2023</a>)</span> inspired by the gold standard method for large corpora employed by <span class="citation" data-cites="ramisch2023">(<a href="#ref-ramisch2023" role="doc-biblioref">Ramisch 2023</a>)</span>. They report that in their sample overall, 96.95% of all speakers have been matched to their respective speeches correctly.</p>
+</section>
+<section id="dictionary-based-measurement-of-populism" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="dictionary-based-measurement-of-populism"><span class="header-section-number">3.2</span> Dictionary Based Measurement of Populism</h3>
+<p>For measuring the amount of populism I am using the populism dictionary developed by <span class="citation" data-cites="gruendl2022populist">(<a href="#ref-gruendl2022populist" role="doc-biblioref">Gründl 2022</a>)</span> building on the works of <span class="citation" data-cites="rooduijn2011measuring">(<a href="#ref-rooduijn2011measuring" role="doc-biblioref">Rooduijn and Pauwels 2011</a>)</span> and <span class="citation" data-cites="pauwels2017measuring">(<a href="#ref-pauwels2017measuring" role="doc-biblioref">Pauwels 2017</a>)</span>. The dictionary consists of populist words and phrases, setting itself apart from earlier approaches by allowing for multi-token regular expressions like _expense (.*) majority_, that could match, e.g., <em>at the “expense of the majority”</em>. It is distributed as the R package <code>popdictR</code>, which with default settings takes a corpus of documents, annotating each document with the number of sentences and the number of sentences containing at least one match with the dictionary.</p>
+<p>As the measure of populism I compute a populism score, the ratio of all sentences to sentences matching the populism dictionary as seen in <a href="#eq-popscore" class="quarto-xref">Equation&nbsp;1</a>.</p>
+<p><span id="eq-popscore"><span class="math display">
+populismscore = \frac{popdictmatches}{nsentences}
+\tag{1}</span></span></p>
+<p>To deal with the populism score taking on more extreme values with shorter texts, I avoid looking at populism scores of single parliamentary sessions but instead, always aggregate speeches over a time period of at least a quarter year, which is suitable when looking at trends over multiple legislative terms and provides more stable results.</p>
+</section>
+</section>
+<section id="sec-results" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="sec-results"><span class="header-section-number">4</span> Results</h2>
+<section id="sec-creategermaparl" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="sec-creategermaparl"><span class="header-section-number">4.1</span> Data Processing</h3>
+<p>To get the GermaParl corpus into a data structure that I could apply the populism dictionary by <span class="citation" data-cites="gruendl2022populist">(<a href="#ref-gruendl2022populist" role="doc-biblioref">Gründl 2022</a>)</span> I had to convert it from the <code>polmineR</code> corpus it is distributed as. I wrote some R code that would go over the whole corpus in batches and convert it to a <code>data.table</code> from the <code>data.table</code> package, with each row representing all the text spoken by one speaker in one parliamentary session. In the same process, I used the <code>popdicR</code> package described in <span class="citation" data-cites="gruendl2022populist">(<a href="#ref-gruendl2022populist" role="doc-biblioref">Gründl 2022</a>)</span> to add the number of sentences with dictionary matches (<code>dict_gruendl_2022</code>), as well as the number of sentences (<code>n_sentences</code>) to each row. The progress, as well as each batch result, would be immediately written to disk as CSV for the process to be able to pick up processing where it left off in case it were interrupted.</p>
+<p>The conversion code and the resulting CSV can be found in the online appendix for reproducibility and as a reference for future works wanting to update the data to newer versions of GermaParl or needing the germaparl corpus as <code>quanteda</code>-corpus or in tabular form. I ran the code locally on my laptop, as it has moderate memory requirements and executed in just a couple of hours - though on a high-performance computing infrastructure the code could be massively parallelized.</p>
+</section>
+<section id="sec-overviewgermaparl" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="sec-overviewgermaparl"><span class="header-section-number">4.2</span> Overview of the Data</h3>
+<p>My dataset is a table of 220976 documents (rows), each document being all the text spoken by one speaker in one parliamentary session, saved in the <code>text</code> column. Each document also contains the metadata saved to each document and speech in the GermaParl Corpus, as documented in <span class="citation" data-cites="germaparl_doc">(<a href="#ref-germaparl_doc" role="doc-biblioref">Blaette and Leonhardt 2023b</a>)</span>.</p>
+<p>Notable for this work are:</p>
+<ul>
+<li><code>lp</code> - legislative term</li>
+<li><code>no</code> - session number in a legislative term</li>
+<li><code>date</code> - date of the parliamentary session</li>
+<li><code>year</code> - year of the parliamentary session</li>
+<li><code>speaker_name</code> - name of the speaker</li>
+<li><code>speaker_party</code> - party of the speaker</li>
+<li><code>speaker_parlgroup</code> - parliamentary group of the speaker</li>
+</ul>
+<p>Additionally, each document contains the results added by applying the populism dictionary:</p>
+<ul>
+<li><code>n_sentences</code> - The number of sentences identified by <code>popdictR</code></li>
+<li><code>n_tokens</code> - The number of sentences identified by <code>popdictR</code></li>
+<li><code>dict_gruendl_2020</code> - The number of sentences containing at least one dictionary match</li>
+</ul>
+<p>There are 30 unique values for the variable speaker_party and 23 for the variable speaker_parlgroup. A large portion of these only ever appear in the first and second parliamentary terms, and for better readability of plots, I exclude them from analysis. There are also some missing values (NA) for speaker_party and speaker_parlgroup, as well as the values “parteilos” and “fraktionslos” which I also exclude. An honorable mention goes to Ludwig Erhard, who’s party affiliation is disputed and who is therefore in his on party category “CDU oder parteilos”. He was indisputably in the parliamentary group “CDU/CSU” though, and thus contained in all plots on parliamentary groups.</p>
+<p>For the reader to get an overview, <a href="#fig-pophistparlgroups" class="quarto-xref">Figure&nbsp;1</a> shows the populism score of all parties relevant in the Bundestag today over the history of the Federal Republic.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>res<span class="ot">&lt;-</span>dt <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(speaker_parlgroup <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"CDU/CSU"</span>, <span class="st">"SPD"</span>, <span class="st">"FDP"</span>, <span class="st">"GRUENE"</span>, <span class="st">"DIE LINKE"</span>, <span class="st">"AfD"</span>, <span class="st">"PDS"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date_quarter =</span> <span class="fu">floor_date</span>(date, <span class="st">"quarter"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(speaker_parlgroup, date_quarter) <span class="sc">|&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">dict_gruendl_2020 =</span> <span class="fu">sum</span>(dict_gruendl_2020), <span class="at">n_sentences=</span><span class="fu">sum</span>(n_sentences), <span class="at">.groups =</span> <span class="st">'drop'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rel_popdict =</span> dict_gruendl_2020<span class="sc">/</span>n_sentences) <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>date_quarter, <span class="at">color=</span>speaker_parlgroup)) <span class="sc">+</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">size =</span> <span class="fl">0.3</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">linewidth =</span> <span class="fl">0.3</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">method =</span> <span class="st">"gam"</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"Populism in Speeches Over Time by Parliamentary Group"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"Parliamentary Group"</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Populism Score"</span>) <span class="sc">+</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Date"</span>) <span class="sc">+</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"CDU/CSU"</span> <span class="ot">=</span> <span class="st">"#333333"</span>, <span class="st">"SPD"</span> <span class="ot">=</span> <span class="st">"#F44647"</span>, <span class="st">"FDP"</span> <span class="ot">=</span> <span class="st">"#FFC107"</span>, <span class="st">"GRUENE"</span> <span class="ot">=</span> <span class="st">"#46962B"</span>, <span class="st">"DIE LINKE"</span> <span class="ot">=</span> <span class="st">"#C72767"</span>, <span class="st">"AfD"</span> <span class="ot">=</span> <span class="st">"#8B4513"</span>, <span class="st">"PDS"</span> <span class="ot">=</span> <span class="st">"pink"</span>))</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-pophistparlgroups" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pophistparlgroups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Paper_files/figure-html/fig-pophistparlgroups-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pophistparlgroups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Populism in the Bundestag Over Time
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-popafdlinke" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="sec-popafdlinke"><span class="header-section-number">4.3</span> R1: The AFDs Speeches are more populist than any of the other parties in the German Bundestag, followed by DIE LINKE</h3>
+<p>The data supports this observation, in line with previous publications ranking the AfD as more populist than DIE LINKE. <a href="#tbl-popafdlinke" class="quarto-xref">Table&nbsp;1</a> shows the populism score of all parliamentary groups since the AfD joined the Bundestag. Speeches by members of DIE LINKE have a populism score (rel_popdict) of 1.5 in this timeframe, while speeches by the AfD have a populism score around 0.025. All other parliamentary groups speeches show a populism score of below 0.01 with the CDU/CSU at the lowest with 0.0087.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dt <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">2017</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(speaker_parlgroup <span class="sc">!=</span> <span class="st">"fraktionslos"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(speaker_parlgroup <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"CDU/CSU"</span>, <span class="st">"SPD"</span>, <span class="st">"FDP"</span>, <span class="st">"GRUENE"</span>, <span class="st">"DIE LINKE"</span>, <span class="st">"AfD"</span>, <span class="st">"PDS"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(speaker_parlgroup) <span class="sc">|&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">dict_gruendl_2020 =</span> <span class="fu">sum</span>(dict_gruendl_2020), <span class="at">n_sentences=</span><span class="fu">sum</span>(n_sentences), <span class="at">.groups =</span> <span class="st">'drop'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rel_popdict =</span> dict_gruendl_2020<span class="sc">/</span>n_sentences) <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(rel_popdict)) <span class="sc">|&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  gt<span class="sc">::</span><span class="fu">gt</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-popafdlinke" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-popafdlinke-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Populism Score of All Parliamentary Groups from 2017-01-01 to 2021-09-07
+</figcaption>
+<div aria-describedby="tbl-popafdlinke-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="vlnihlkrkp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vlnihlkrkp table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#vlnihlkrkp thead, #vlnihlkrkp tbody, #vlnihlkrkp tfoot, #vlnihlkrkp tr, #vlnihlkrkp td, #vlnihlkrkp th {
+  border-style: none;
+}
+
+#vlnihlkrkp p {
+  margin: 0;
+  padding: 0;
+}
+
+#vlnihlkrkp .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#vlnihlkrkp .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#vlnihlkrkp .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#vlnihlkrkp .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#vlnihlkrkp .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#vlnihlkrkp .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#vlnihlkrkp .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#vlnihlkrkp .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#vlnihlkrkp .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#vlnihlkrkp .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#vlnihlkrkp .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#vlnihlkrkp .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#vlnihlkrkp .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#vlnihlkrkp .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#vlnihlkrkp .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vlnihlkrkp .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#vlnihlkrkp .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#vlnihlkrkp .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#vlnihlkrkp .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vlnihlkrkp .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#vlnihlkrkp .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vlnihlkrkp .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#vlnihlkrkp .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vlnihlkrkp .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#vlnihlkrkp .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#vlnihlkrkp .gt_left {
+  text-align: left;
+}
+
+#vlnihlkrkp .gt_center {
+  text-align: center;
+}
+
+#vlnihlkrkp .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#vlnihlkrkp .gt_font_normal {
+  font-weight: normal;
+}
+
+#vlnihlkrkp .gt_font_bold {
+  font-weight: bold;
+}
+
+#vlnihlkrkp .gt_font_italic {
+  font-style: italic;
+}
+
+#vlnihlkrkp .gt_super {
+  font-size: 65%;
+}
+
+#vlnihlkrkp .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#vlnihlkrkp .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#vlnihlkrkp .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#vlnihlkrkp .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#vlnihlkrkp .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#vlnihlkrkp .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#vlnihlkrkp .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#vlnihlkrkp .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#vlnihlkrkp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="speaker_parlgroup" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">speaker_parlgroup</th>
+<th id="dict_gruendl_2020" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">dict_gruendl_2020</th>
+<th id="n_sentences" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">n_sentences</th>
+<th id="rel_popdict" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">rel_popdict</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="speaker_parlgroup">AfD</td>
+<td class="gt_row gt_right" headers="dict_gruendl_2020">3577</td>
+<td class="gt_row gt_right" headers="n_sentences">143066</td>
+<td class="gt_row gt_right" headers="rel_popdict">0.025002446</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="speaker_parlgroup">DIE LINKE</td>
+<td class="gt_row gt_right" headers="dict_gruendl_2020">1974</td>
+<td class="gt_row gt_right" headers="n_sentences">130446</td>
+<td class="gt_row gt_right" headers="rel_popdict">0.015132699</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="speaker_parlgroup">GRUENE</td>
+<td class="gt_row gt_right" headers="dict_gruendl_2020">1329</td>
+<td class="gt_row gt_right" headers="n_sentences">140189</td>
+<td class="gt_row gt_right" headers="rel_popdict">0.009480059</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="speaker_parlgroup">FDP</td>
+<td class="gt_row gt_right" headers="dict_gruendl_2020">1093</td>
+<td class="gt_row gt_right" headers="n_sentences">116462</td>
+<td class="gt_row gt_right" headers="rel_popdict">0.009385035</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="speaker_parlgroup">SPD</td>
+<td class="gt_row gt_right" headers="dict_gruendl_2020">1943</td>
+<td class="gt_row gt_right" headers="n_sentences">216416</td>
+<td class="gt_row gt_right" headers="rel_popdict">0.008978079</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="speaker_parlgroup">CDU/CSU</td>
+<td class="gt_row gt_right" headers="dict_gruendl_2020">2890</td>
+<td class="gt_row gt_right" headers="n_sentences">331523</td>
+<td class="gt_row gt_right" headers="rel_popdict">0.008717344</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="sec-popsinceafd" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="sec-popsinceafd"><span class="header-section-number">4.4</span> R2: Populism in the Communication of Other Parliamentary Groups Did Not Rise Since the AfD Entered the Political Stage.</h3>
+<p>The data shows no evidence for more populism in the speeches of other parliamentary groups since the foundation of the AfD, nor since it entered the European Parliament or the German Bundestag. On the contrary, as <a href="#fig-popparlgroupsafd" class="quarto-xref">Figure&nbsp;2</a> shows, while CDU/CSU, DIE LINKE, GRUENE and FDP remain very constant, the populism score of SPD speeches is trending downward since a small peak before the founding of the AfD.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dt <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">&gt;</span> <span class="dv">2005</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(speaker_parlgroup <span class="sc">!=</span> <span class="st">"fraktionslos"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(speaker_parlgroup <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"CDU/CSU"</span>, <span class="st">"SPD"</span>, <span class="st">"FDP"</span>, <span class="st">"GRUENE"</span>, <span class="st">"DIE LINKE"</span>, <span class="st">"AfD"</span>, <span class="st">"PDS"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date_quarter =</span> <span class="fu">floor_date</span>(date, <span class="st">"quarter"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(speaker_parlgroup, date_quarter) <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">dict_gruendl_2020 =</span> <span class="fu">sum</span>(dict_gruendl_2020), <span class="at">n_sentences=</span><span class="fu">sum</span>(n_sentences), <span class="at">.groups =</span> <span class="st">'drop'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rel_popdict =</span> dict_gruendl_2020<span class="sc">/</span>n_sentences) <span class="sc">|&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="fu">as.Date</span>(date_quarter), <span class="at">color=</span>speaker_parlgroup)) <span class="sc">+</span> </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">size =</span> <span class="fl">0.3</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">linewidth =</span> <span class="fl">0.3</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">linewidth =</span> <span class="fl">0.8</span>, <span class="at">method =</span> <span class="st">"gam"</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">linewidth =</span> <span class="fl">0.3</span>, <span class="at">xintercept =</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">'2013-02-06'</span>, <span class="st">'2014-05-15'</span>, <span class="st">'2017-09-24'</span>))) <span class="sc">+</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"Populism in Speeches by Parliamentary Group Since 2005"</span>,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"Parliamentary Group"</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Populism Score"</span>) <span class="sc">+</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Date"</span>) <span class="sc">+</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">size=</span><span class="dv">4</span>, <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">'2013-02-06'</span>), <span class="at">y =</span> <span class="fl">0.03</span>, <span class="at">label =</span> <span class="st">"Foundation of the AfD"</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">angle =</span> <span class="dv">90</span>) <span class="sc">+</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">size=</span><span class="dv">4</span>, <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">'2014-05-15'</span>), <span class="at">y =</span> <span class="fl">0.03</span>, <span class="at">label =</span> <span class="st">"AfD enters the European Parliament"</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">angle =</span> <span class="dv">90</span>) <span class="sc">+</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">"text"</span>, <span class="at">size=</span><span class="dv">4</span>, <span class="at">x =</span> <span class="fu">as.Date</span>(<span class="st">'2017-09-24'</span>), <span class="at">y =</span> <span class="fl">0.03</span>, <span class="at">label =</span> <span class="st">"AfD enters the Bundestag"</span>, <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.2</span>, <span class="at">angle =</span> <span class="dv">90</span>) <span class="sc">+</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"CDU/CSU"</span> <span class="ot">=</span> <span class="st">"#333333"</span>, <span class="st">"SPD"</span> <span class="ot">=</span> <span class="st">"#F44647"</span>, <span class="st">"FDP"</span> <span class="ot">=</span> <span class="st">"#FFC107"</span>, <span class="st">"GRUENE"</span> <span class="ot">=</span> <span class="st">"#46962B"</span>, <span class="st">"DIE LINKE"</span> <span class="ot">=</span> <span class="st">"#C72767"</span>, <span class="st">"AfD"</span> <span class="ot">=</span> <span class="st">"#8B4513"</span>, <span class="st">"PDS"</span> <span class="ot">=</span> <span class="st">"pink"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-popparlgroupsafd" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-popparlgroupsafd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Paper_files/figure-html/fig-popparlgroupsafd-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-popparlgroupsafd-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Populism in parliamentary speeches by parliamentary group since 2005
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-poplegisterm" class="level3" data-number="4.5">
+<h3 data-number="4.5" class="anchored" data-anchor-id="sec-poplegisterm"><span class="header-section-number">4.5</span> H1: There is more populism in the Bundestag towards the end of a legislative term.</h3>
+<p>The Data supports a rise in populism overall in the parliament towards the end of a legislative term, as seen in <a href="#fig-poplegisterm" class="quarto-xref">Figure&nbsp;3</a>. Interestingly, a legislative term does also, in general, start with more populism in speeches, even higher than the overall populism score at the end of a legislative term.</p>
+<p>Another interesting observation can be made: there is a distinction to be made between legislative terms 1-7 and 8-18 as seen in <a href="#fig-poplegistermearly" class="quarto-xref">Figure&nbsp;4</a> and <a href="#fig-poplegistermlate" class="quarto-xref">Figure&nbsp;5</a>. When looking at the first 7 terms in isolation, they do not show populism rising towards the end of the legislative term. On the contrary, populism seems to be at its lowest at the end of the legislative term. For the terms 8-18 it holds true that populism scores of speeches are higher at the end of a legislative term, with the only exception of the 15th and 18th legislative terms.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dt <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">dict_gruendl_2020 =</span> <span class="fu">sum</span>(dict_gruendl_2020), <span class="at">n_sentences =</span> <span class="fu">sum</span>(n_sentences), <span class="at">no =</span> <span class="fu">median</span>(no), <span class="at">lp=</span><span class="fu">median</span>(lp), <span class="at">.by =</span> date) <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">rel_popdict =</span> dict_gruendl_2020<span class="sc">/</span>n_sentences) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">reframe</span>(<span class="at">lp_progress =</span> no<span class="sc">/</span><span class="fu">max</span>(no), rel_popdict, dict_gruendl_2020, n_sentences, <span class="at">.by =</span> lp) <span class="sc">|&gt;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>lp_progress, <span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>(<span class="at">linewidth=</span><span class="fl">0.3</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">color=</span><span class="fu">as.factor</span>(lp)), <span class="at">se=</span><span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Populism Over the Course of A Legislative Term"</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Legislative Term"</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">"Populism Score"</span>) <span class="sc">+</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Legislative Term Progress"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-poplegisterm" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-poplegisterm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Paper_files/figure-html/fig-poplegisterm-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-poplegisterm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Populism over the course of a legislative term
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> dt <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(lp <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">dict_gruendl_2020 =</span> <span class="fu">sum</span>(dict_gruendl_2020), <span class="at">n_sentences =</span> <span class="fu">sum</span>(n_sentences), <span class="at">no =</span> <span class="fu">median</span>(no), <span class="at">lp=</span><span class="fu">median</span>(lp), <span class="at">.by =</span> date) <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rel_popdict =</span> dict_gruendl_2020<span class="sc">/</span>n_sentences) <span class="sc">|&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reframe</span>(<span class="at">lp_progress =</span> no<span class="sc">/</span><span class="fu">max</span>(no), rel_popdict, dict_gruendl_2020, n_sentences, <span class="at">.by =</span> lp) <span class="sc">|&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>lp_progress, <span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">linewidth=</span><span class="fl">0.3</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">color=</span><span class="fu">as.factor</span>(lp)), <span class="at">se=</span><span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"Populism in Parliamentary Speeches 1st-7th Legislative Term"</span>,</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"Legislative Term"</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Populism Score"</span>) <span class="sc">+</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Legislative Term Progress"</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-poplegistermearly" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-poplegistermearly-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Paper_files/figure-html/fig-poplegistermearly-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-poplegistermearly-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Populism in parliamentary speeches in legislative terms 1-7
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> dt <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(lp <span class="sc">%in%</span> <span class="dv">8</span><span class="sc">:</span><span class="dv">18</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">dict_gruendl_2020 =</span> <span class="fu">sum</span>(dict_gruendl_2020), <span class="at">n_sentences =</span> <span class="fu">sum</span>(n_sentences), <span class="at">no =</span> <span class="fu">median</span>(no), <span class="at">lp=</span><span class="fu">median</span>(lp), <span class="at">.by =</span> date) <span class="sc">|&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rel_popdict =</span> dict_gruendl_2020<span class="sc">/</span>n_sentences) <span class="sc">|&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">reframe</span>(<span class="at">lp_progress =</span> no<span class="sc">/</span><span class="fu">max</span>(no), rel_popdict, dict_gruendl_2020, n_sentences, <span class="at">.by =</span> lp) <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span>lp_progress, <span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">linewidth=</span><span class="fl">0.3</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">color=</span><span class="fu">as.factor</span>(lp)), <span class="at">se=</span><span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"Populism in Parliamentary Speeches Legislative Terms 8-18"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"Legislative Term"</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Populism Score"</span>) <span class="sc">+</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Legislative Term Progress"</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-poplegistermlate" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-poplegistermlate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Paper_files/figure-html/fig-poplegistermlate-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-poplegistermlate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Populism in parliamentary speeches in legislative terms 8-18
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-popgovern" class="level3" data-number="4.6">
+<h3 data-number="4.6" class="anchored" data-anchor-id="sec-popgovern"><span class="header-section-number">4.6</span> H2: Parliamentary Groups hold more populist speeches when they are not part of the government</h3>
+<p><a href="#fig-popgovern" class="quarto-xref">Figure&nbsp;6</a> shows the evolution of the populism score of the four parties still relevant today that have taken governmental responsibility in the past, with parties forming the government in a given period indicated by colored bars at the bottom of each chart. For the CDU the plot <a href="#fig-popgovern-1" class="quarto-xref">Figure&nbsp;6 (a)</a> shows a clear jump in the graphs both times it entered and left the government. The SPD in <a href="#fig-popgovern-2" class="quarto-xref">Figure&nbsp;6 (b)</a> does not clearly exhibit this behavior until entering the government in 1998. After that, there is a clear change in populism score at the subsequent times entering and leaving the government. Before 1998, there are distinct jumps in the populism score, but they occur both while in government, and while in opposition. The populism score of the FDP shown in <a href="#fig-popgovern-3" class="quarto-xref">Figure&nbsp;6 (c)</a> seems to be less linked to actually being in government. The Greens in <a href="#fig-popgovern-4" class="quarto-xref">Figure&nbsp;6 (d)</a> do have jumps in populism score when entering and exiting government, but they are minor in comparison to the drastic decrease in populism since their founding.</p>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (parlgroup <span class="cf">in</span> <span class="fu">c</span>(<span class="st">"CDU/CSU"</span>, <span class="st">"SPD"</span>, <span class="st">"FDP"</span>, <span class="st">"GRUENE"</span>)) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  res<span class="ot">&lt;-</span>dt <span class="sc">|&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(speaker_parlgroup <span class="sc">==</span> parlgroup) <span class="sc">|&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">date_quarter =</span> <span class="fu">floor_date</span>(date, <span class="st">"year"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(speaker_parlgroup, date_quarter) <span class="sc">|&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">dict_gruendl_2020 =</span> <span class="fu">sum</span>(dict_gruendl_2020), <span class="at">n_sentences=</span><span class="fu">sum</span>(n_sentences), <span class="at">.groups =</span> <span class="st">'drop'</span>) <span class="sc">|&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">rel_popdict =</span> dict_gruendl_2020<span class="sc">/</span>n_sentences) <span class="sc">|&gt;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">x=</span><span class="fu">as.Date</span>(date_quarter), <span class="at">color=</span>speaker_parlgroup)) <span class="sc">+</span> </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>, <span class="at">size =</span> <span class="fl">0.3</span>, <span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>(<span class="at">mapping=</span><span class="fu">aes</span>(<span class="at">y=</span>rel_popdict)) <span class="sc">+</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"Parliamentary Group"</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylab</span>(<span class="st">"Populism Score"</span>) <span class="sc">+</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"Date"</span>) <span class="sc">+</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"CDU/CSU"</span> <span class="ot">=</span> <span class="st">"#333333"</span>, <span class="st">"SPD"</span> <span class="ot">=</span> <span class="st">"#F44647"</span>, <span class="st">"FDP"</span> <span class="ot">=</span> <span class="st">"#FFC107"</span>, <span class="st">"GRUENE"</span> <span class="ot">=</span> <span class="st">"#46962B"</span>, <span class="st">"DIE LINKE"</span> <span class="ot">=</span> <span class="st">"#C72767"</span>, <span class="st">"AfD"</span> <span class="ot">=</span> <span class="st">"#8B4513"</span>, <span class="st">"PDS"</span> <span class="ot">=</span> <span class="st">"pink"</span>)) <span class="sc">+</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1949-09-20'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1957-10-29'</span>), <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="fl">0.002</span>, </span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#333333"</span>)<span class="sc">+</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1949-09-20'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1957-10-29'</span>), <span class="at">ymin =</span> <span class="fl">0.002</span>, <span class="at">ymax =</span> <span class="fl">0.004</span>, </span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#FFC107"</span>)<span class="sc">+</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1957-10-29'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1961-11-07'</span>), <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="fl">0.002</span>, </span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#333333"</span>)<span class="sc">+</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1961-11-07'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1966-12-01'</span>), <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="fl">0.002</span>, </span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#333333"</span>)<span class="sc">+</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1961-11-07'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1966-12-01'</span>), <span class="at">ymin =</span> <span class="fl">0.002</span>, <span class="at">ymax =</span> <span class="fl">0.004</span>, </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#FFC107"</span>)<span class="sc">+</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1966-12-01'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1969-10-22'</span>), <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="fl">0.002</span>, </span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#333333"</span>)<span class="sc">+</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1966-12-01'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1969-10-22'</span>), <span class="at">ymin =</span> <span class="fl">0.004</span>, <span class="at">ymax =</span> <span class="fl">0.006</span>, </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#F44647"</span>)<span class="sc">+</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1969-10-22'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1982-10-04'</span>), <span class="at">ymin =</span> <span class="fl">0.002</span>, <span class="at">ymax =</span> <span class="fl">0.004</span>, </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#FFC107"</span>)<span class="sc">+</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1969-10-22'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1982-10-04'</span>), <span class="at">ymin =</span> <span class="fl">0.004</span>, <span class="at">ymax =</span> <span class="fl">0.006</span>, </span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#F44647"</span>)<span class="sc">+</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1982-10-04'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1998-10-27'</span>), <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="fl">0.002</span>, </span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#333333"</span>)<span class="sc">+</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1982-10-04'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'1998-10-27'</span>), <span class="at">ymin =</span> <span class="fl">0.002</span>, <span class="at">ymax =</span> <span class="fl">0.004</span>, </span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#FFC107"</span>)<span class="sc">+</span></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1998-10-27'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'2005-11-22'</span>), <span class="at">ymin =</span> <span class="fl">0.004</span>, <span class="at">ymax =</span> <span class="fl">0.006</span>, </span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#F44647"</span>)<span class="sc">+</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'1998-10-27'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'2005-11-22'</span>), <span class="at">ymin =</span> <span class="fl">0.006</span>, <span class="at">ymax =</span> <span class="fl">0.008</span>, </span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#46962B"</span>)<span class="sc">+</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'2005-11-22'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'2009-10-29'</span>), <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="fl">0.002</span>, </span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#333333"</span>)<span class="sc">+</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'2005-11-22'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'2009-10-29'</span>), <span class="at">ymin =</span> <span class="fl">0.004</span>, <span class="at">ymax =</span> <span class="fl">0.006</span>, </span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#F44647"</span>)<span class="sc">+</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'2009-10-29'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'2013-12-17'</span>), <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="fl">0.002</span>, </span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#333333"</span>)<span class="sc">+</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'2009-10-29'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'2013-12-17'</span>), <span class="at">ymin =</span> <span class="fl">0.002</span>, <span class="at">ymax =</span> <span class="fl">0.004</span>, </span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#FFC107"</span>)<span class="sc">+</span></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'2013-12-17'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'2021-12-08'</span>), <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="fl">0.002</span>, </span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#333333"</span>)<span class="sc">+</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>    <span class="fu">annotate</span>(<span class="st">"rect"</span>, <span class="at">xmin =</span> <span class="fu">as.Date</span>(<span class="st">'2013-12-17'</span>), <span class="at">xmax =</span> <span class="fu">as.Date</span>(<span class="st">'2021-12-08'</span>), <span class="at">ymin =</span> <span class="fl">0.004</span>, <span class="at">ymax =</span> <span class="fl">0.006</span>, </span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>             <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">fill =</span> <span class="st">"#F44647"</span>) <span class="sc">+</span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="fl">0.025</span>) <span class="sc">+</span></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(res)</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="fig-popgovern" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-popgovern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-popgovern" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-popgovern-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-popgovern-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Paper_files/figure-html/fig-popgovern-1.png" class="img-fluid figure-img" data-ref-parent="fig-popgovern" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-popgovern-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) CDU/CSU
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-popgovern" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-popgovern-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-popgovern-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Paper_files/figure-html/fig-popgovern-2.png" class="img-fluid figure-img" data-ref-parent="fig-popgovern" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-popgovern-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) SPD
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-popgovern" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-popgovern-3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-popgovern-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Paper_files/figure-html/fig-popgovern-3.png" class="img-fluid figure-img" data-ref-parent="fig-popgovern" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-popgovern-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) FDP
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-popgovern" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-popgovern-4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-popgovern-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Paper_files/figure-html/fig-popgovern-4.png" class="img-fluid figure-img" data-ref-parent="fig-popgovern" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-popgovern-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) GRUENE
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-popgovern-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Populism score of speeches over time by parliamentary group. Bottom bars indicate which parliamentary groups formed the government.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="sec-conclusion" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sec-conclusion"><span class="header-section-number">5</span> Conclusion</h2>
+<p>In this work I have shown that applying the <code>popdictR</code> package to parliamentary speeches yields results that are in line with previous research, indicating that it is not just applicable to social media posts, but to parliamentary speech as well.</p>
+<p>In line with previous research <span class="citation" data-cites="fawzi2016germany">(<a href="#ref-fawzi2016germany" role="doc-biblioref">Fawzi, Obermaier, and Reinemann 2016</a>)</span>, <span class="citation" data-cites="gruendl2022populist">(<a href="#ref-gruendl2022populist" role="doc-biblioref">Gründl 2022</a>)</span>, results for R1 show that applying the popdictR to parliamentary speeches in the bundestag resturns the AfD with the party with the highest populism score, followed by DIE LINKE.</p>
+<p>My results for R2 further confirm the validity of <code>popdictR</code> on parliamentary speech, by replicating the result of <span class="citation" data-cites="Lewandowsky2022">(<a href="#ref-Lewandowsky2022" role="doc-biblioref">Lewandowsky et al. 2022</a>)</span>, that populism of parties does not increase with new populist parties entering parliament.</p>
+<p>H1: “There is more populism in the parliament towards the end of a legislative term” has been confirmed, with a caveat. Examining the data closely revealed that the pattern only appears starting from the 8. term. That is most likely because of the elections having taken place earlier in the legislative term in terms 1-7, while from the 8. term on elections took place a maximum of 30 days before the end of the term. Thus the hypothesis is ill posed and should have referred to the time of the election instead of the end of a legislative term.</p>
+<p>The pattern emerging at the 8. term does still prove that there is periodic short term changes in the level of populistic communication happening for political actors. As these changes occur regularly at the start and end of a parliamentary term they are better explainable with a strategic change of communication than an ideological change of the parliamentary group.</p>
+<p>H2: “Parliamentary Groups hold more populistic speeches when they are not part of the government” has been partly confirmed. While the pattern does not hold true for all parties every time, it is clearly visible in the data that mulitple times strong changes in populism score of the CDU/CSU, the GRUENE and the SPD occur at times they enter or exit government.</p>
+<p>The results for H1 and H2 show that changes in the level of populistic communication of parliamentary groups happen at events that more likely coincide with a strategic shift, than an ideological shift towards more or less populism. I argue that these results support the notion that it can be useful to look at populism on a communicative level rather than defining it as an ideology.</p>
+</section>
+<section id="sec-limit" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="sec-limit"><span class="header-section-number">6</span> Limitations and Future Work</h2>
+<p>While this work has been made under the assumption of the usefulness of the populism definition by <span class="citation" data-cites="aslanidis2016populism">(<a href="#ref-aslanidis2016populism" role="doc-biblioref">Aslanidis 2016</a>)</span> and does show that there are results that are better explained by different approaches than the definition of populism as a (thin) ideology, the results do not support one specific definition of populism. Future work could focus on finding more specific tests that systematically rule out different definitions of populism.</p>
+<p>It would also be interesting to see comparitive studies testing if the two tested hypothesis do hold true in other parliaments aswell.</p>
+</section>
+<section id="references" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="references"><span class="header-section-number">7</span> References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-aslanidis2016populism" class="csl-entry" role="listitem">
+Aslanidis, Paris. 2016. <span>“Is Populism an Ideology? A Refutation and a New Perspective.”</span> <em>Political Studies</em> 64 (1_suppl): 88–104.
+</div>
+<div id="ref-germaparl2" class="csl-entry" role="listitem">
+Blaette, Andreas, and Christoph Leonhardt. 2023a. <span>“GermaParl Corpus of Plenary Protocols (V2.0.1) [Data Set].”</span> <em>Zenodo</em>. <a href="https://doi.org/10.5281/zenodo.10416536">https://doi.org/10.5281/zenodo.10416536</a>.
+</div>
+<div id="ref-germaparl_doc" class="csl-entry" role="listitem">
+———. 2023b. <span>“The GermaParl Corpus of Plenary Protocols (V2.0.1) - Documentation. Version 2023-12-22.”</span> <a href="https://polmine.github.io/GermaParl2">https://polmine.github.io/GermaParl2</a>.
+</div>
+<div id="ref-blatte2018germaparl" class="csl-entry" role="listitem">
+Blätte, Andreas, and André Blessing. 2018. <span>“The GermaParl Corpus of Parliamentary Protocols.”</span> In <em>Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018)</em>.
+</div>
+<div id="ref-fawzi2016germany" class="csl-entry" role="listitem">
+Fawzi, Nayla, Magdalena Obermaier, and Carsten Reinemann. 2016. <span>“Germany: Is the Populism Laggard Catching Up?”</span> In <em>Populist Political Communication in Europe</em>, 111–26. Routledge.
+</div>
+<div id="ref-gruendl2022populist" class="csl-entry" role="listitem">
+Gründl, Johann. 2022. <span>“Populist Ideas on Social Media: A Dictionary-Based Measurement of Populist Communication.”</span> <em>New Media &amp; Society</em> 24 (6): 1481–99. <a href="https://doi.org/10.1177/1461444820976970">https://doi.org/10.1177/1461444820976970</a>.
+</div>
+<div id="ref-leonhardt2023evaluating" class="csl-entry" role="listitem">
+Leonhardt, Christoph, and Andreas Blätte. 2023. <span>“Evaluating the Quality of the GermaParl Corpus of Plenary Protocols (V2. 0.0).”</span> In <em>Proceedings of the 3rd Workshop on Computational Linguistics for the Political and Social Sciences</em>, 88–100.
+</div>
+<div id="ref-Lewandowsky2022" class="csl-entry" role="listitem">
+Lewandowsky, Marcel, Julia Schwanholz, Christoph Leonhardt, and Andreas Blätte. 2022. <span>“New Parties, Populism, and Parliamentary Polarization: Evidence from Plenary Debates in the German Bundestag.”</span> In <em>The Palgrave Handbook of Populism</em>, edited by Michael Oswald, 611–27. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-80803-7_37">https://doi.org/10.1007/978-3-030-80803-7_37</a>.
+</div>
+<div id="ref-moffitt2016global" class="csl-entry" role="listitem">
+Moffitt, Benjamin. 2016. <em>The Global Rise of Populism: Performance, Political Style, and Representation</em>. Stanford University Press.
+</div>
+<div id="ref-mudde2004populist" class="csl-entry" role="listitem">
+Mudde, Cas. 2004. <span>“The Populist Zeitgeist: Government and Opposition.”</span> <em>Government and Opposition</em>, 543–63.
+</div>
+<div id="ref-pauwels2017measuring" class="csl-entry" role="listitem">
+Pauwels, Teun. 2017. <span>“Measuring Populism: A Review of Current Approaches.”</span> <em>Political Populism</em>, 123–36.
+</div>
+<div id="ref-ramisch2023" class="csl-entry" role="listitem">
+Ramisch, Paul. 2023. <span>“<span class="nocase">Open Discourse - eine digitale Quellenkritik: Goldstandard-Korpus-Evaluation als Methode und epistemologische Konsequenzen</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.8322330">https://doi.org/10.5281/zenodo.8322330</a>.
+</div>
+<div id="ref-rooduijn2011measuring" class="csl-entry" role="listitem">
+Rooduijn, Matthijs, and Teun Pauwels. 2011. <span>“Measuring Populism: Comparing Two Methods of Content Analysis.”</span> <em>West European Politics</em> 34 (6): 1272–83.
+</div>
+<div id="ref-weyland2001clarifying" class="csl-entry" role="listitem">
+Weyland, Kurt. 2001. <span>“Clarifying a Contested Concept: Populism in the Study of Latin American Politics.”</span> <em>Comparative Politics</em>, 1–22.
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
